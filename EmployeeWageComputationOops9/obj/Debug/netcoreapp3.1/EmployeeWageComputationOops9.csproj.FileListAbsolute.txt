@@ -1,0 +1,11 @@
+D:\DLS-RFP-278\Project\EmployeeWageComputationOops9\EmployeeWageComputationOops9\bin\Debug\netcoreapp3.1\EmployeeWageComputationOops9.exe
+D:\DLS-RFP-278\Project\EmployeeWageComputationOops9\EmployeeWageComputationOops9\bin\Debug\netcoreapp3.1\EmployeeWageComputationOops9.deps.json
+D:\DLS-RFP-278\Project\EmployeeWageComputationOops9\EmployeeWageComputationOops9\bin\Debug\netcoreapp3.1\EmployeeWageComputationOops9.runtimeconfig.json
+D:\DLS-RFP-278\Project\EmployeeWageComputationOops9\EmployeeWageComputationOops9\bin\Debug\netcoreapp3.1\EmployeeWageComputationOops9.runtimeconfig.dev.json
+D:\DLS-RFP-278\Project\EmployeeWageComputationOops9\EmployeeWageComputationOops9\bin\Debug\netcoreapp3.1\EmployeeWageComputationOops9.dll
+D:\DLS-RFP-278\Project\EmployeeWageComputationOops9\EmployeeWageComputationOops9\bin\Debug\netcoreapp3.1\EmployeeWageComputationOops9.pdb
+D:\DLS-RFP-278\Project\EmployeeWageComputationOops9\EmployeeWageComputationOops9\obj\Debug\netcoreapp3.1\EmployeeWageComputationOops9.csprojAssemblyReference.cache
+D:\DLS-RFP-278\Project\EmployeeWageComputationOops9\EmployeeWageComputationOops9\obj\Debug\netcoreapp3.1\EmployeeWageComputationOops9.AssemblyInfoInputs.cache
+D:\DLS-RFP-278\Project\EmployeeWageComputationOops9\EmployeeWageComputationOops9\obj\Debug\netcoreapp3.1\EmployeeWageComputationOops9.AssemblyInfo.cs
+D:\DLS-RFP-278\Project\EmployeeWageComputationOops9\EmployeeWageComputationOops9\obj\Debug\netcoreapp3.1\EmployeeWageComputationOops9.dll
+D:\DLS-RFP-278\Project\EmployeeWageComputationOops9\EmployeeWageComputationOops9\obj\Debug\netcoreapp3.1\EmployeeWageComputationOops9.pdb
