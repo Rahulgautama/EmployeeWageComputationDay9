@@ -8,10 +8,8 @@ namespace EmployeeWageComputationOops9
         {
             Console.WriteLine("Calculate Daily Employee Wage");
             EmployeeDailyWage employeeDailyWage = new EmployeeDailyWage(20);
-            int empWage=employeeDailyWage.CalculateWageFullTimePartTime();
-
+            int empWage=employeeDailyWage.CalculateEmployeeWageSwitchCase();
             Console.WriteLine("Employee Wage :" + empWage);
-
         }
     }
 }

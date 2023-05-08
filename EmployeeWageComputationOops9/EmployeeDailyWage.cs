@@ -6,39 +6,32 @@ namespace EmployeeWageComputationOops9
 {
     class EmployeeDailyWage
     {
-        int EMP_RAT_PER_HOUR;// = 20;
-        int IS_FULL_TIME = 1;
-        int IS_PART_TIME = 2;
-        int empHour = 0;
-        int empWage = 0;
-        public EmployeeDailyWage(int emp_Rate_Per_Hours)
+        public int EMP_RATE_PER_HOUR;//= 20;
+        public EmployeeDailyWage(int emp_Rate_Per_Hrs)
         {
-            EMP_RAT_PER_HOUR=emp_Rate_Per_Hours;
-        }
-        
-        public static int CalculateEmployeeWork()
+            this.EMP_RATE_PER_HOUR = emp_Rate_Per_Hrs;
+        }        
+        public const int IS_Full_TIME = 1;
+        public const int IS_PART_TIME = 2;
+        public int CalculateEmployeeWageSwitchCase()
         {
+            int empHour = 0;
+            int empWage = 0;
             Random random = new Random();
             int empCheck = random.Next(3);
-            return empCheck;
-        }
-        public int CalculateWageFullTimePartTime()
-        {
-            int empCheck = CalculateEmployeeWork();
-            if (empCheck == IS_FULL_TIME)
+            switch (empCheck)
             {
-                empHour = 8;
+                case IS_Full_TIME:
+                    empHour = 8;
+                    break;
+                case IS_PART_TIME:
+                    empHour = 4;
+                    break;
+                default:
+                    empHour = 0;
+                    break;
             }
-            else if (empCheck == IS_PART_TIME)
-            {
-                empHour = 4;
-            }
-            else
-            {
-
-                empHour = 0;
-            }
-            empWage = empHour * EMP_RAT_PER_HOUR;
+            empWage = empHour * EMP_RATE_PER_HOUR;
             return empWage;
         }
     }
