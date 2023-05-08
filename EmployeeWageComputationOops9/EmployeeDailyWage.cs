@@ -7,43 +7,50 @@ namespace EmployeeWageComputationOops9
     class EmployeeDailyWage
     {
 
-        public  int EMP_RATE_PER_HOUR;// = 20;
-        public const int IS_Full_TIME = 1;
-        public const int IS_PART_TIME = 2;
-        public int NUM_OF_WORKING_DAY;//= 20;
-        public EmployeeDailyWage(int emp_Rate_Per_Hrs,int num_of_Working_Days)
+        public abstract class CalculateEmployeeWageAMonth
         {
-            this.EMP_RATE_PER_HOUR = emp_Rate_Per_Hrs;
-            this.NUM_OF_WORKING_DAY = num_of_Working_Days;
+            public abstract int[] CalculateEmployeeWageTotalHrsAMonth(int emp_Rate_Per_Hrs, int num_Working_Days, int max_Hrs_In_Month);
+            
         }
-
-        public void CalculateEmployeeWageMonth()
+        public class CalculateEmployeeWage : CalculateEmployeeWageAMonth
         {
-            int empHour = 0;
-            int empWage = 0;
-            int totalEmpWage = 0;
-            for (int day = 0; day < NUM_OF_WORKING_DAY; day++)
+
+            public override int[] CalculateEmployeeWageTotalHrsAMonth(int emp_Rate_Per_Hrs,int num_Working_Days,int max_HrS_In_Month)
             {
-                Random random = new Random();
-                int empCheck = random.Next(3);
-                switch (empCheck)
-                {
-                    case IS_Full_TIME:
-                        empHour = 8;
-                        break;
-                    case IS_PART_TIME:
-                        empHour = 4;
-                        break;
-                    default:
-                        empHour = 0;
-                        break;
-                }
-                empWage = empHour * EMP_RATE_PER_HOUR;
-                Console.WriteLine("Employee Wage :" + empWage);
-                totalEmpWage += empWage;
+                int EMP_RATE_PER_HOUR = emp_Rate_Per_Hrs;// 20;
+                int empHour = 0;
+                int empWage = 0;
+                int totalEmpWage = 0;
+                int totalEmpHour = 0;
+                int totalWorkingDays = 0;
+                int totalWorkingHours = 0;
+                int NUM_OF_WORKING_DAYS = num_Working_Days;//20;
+                int MAX_HRS_IN_MONTH = max_HrS_In_Month;//100;
+                Random rdm = new Random();
 
+                while (totalWorkingDays < NUM_OF_WORKING_DAYS && totalWorkingHours < MAX_HRS_IN_MONTH)
+                {
+                    totalWorkingDays++;
+                    int empCheck = rdm.Next(3);
+                    switch (empCheck)
+                    {
+                        case 1:
+                            empHour = 8;
+                            break;
+                        case 2:
+                            empHour = 4;
+                            break;
+                        default:
+                            empHour = 0;
+                            break;
+                    }
+                    totalEmpHour += empHour;
+                    empWage = empHour * EMP_RATE_PER_HOUR;
+                    totalEmpWage += empWage;
+                }
+                int[] arrEmpWage = { totalWorkingDays, totalEmpHour, totalEmpWage };
+                return arrEmpWage;
             }
-            Console.WriteLine("Total EmpWage :" + totalEmpWage);
         }
-    }
+        }
 }
