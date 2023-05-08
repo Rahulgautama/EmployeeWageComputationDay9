@@ -6,18 +6,9 @@ namespace EmployeeWageComputationOops9
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Employee Wage Computation Program using Oops Concept Day9");
-            EmployeeAttendance employeeAttendance = new EmployeeAttendance();
-            int empCheck = employeeAttendance.CheckEmpoyeeAttendacne();
-            const int IS_FULL_TIME = 1;
-            if (empCheck == IS_FULL_TIME)
-            {
-                Console.WriteLine("Empoyee is Present");
-            }
-            else
-            {
-                Console.WriteLine("Empoyee is Absent");
-            }
+            Console.WriteLine("Calculate Daily Employee Wage");
+            EmployeeDailyWage employeeDailyWage = new EmployeeDailyWage();
+            employeeDailyWage.CalculateEmpWage();
         }
     }
 }
