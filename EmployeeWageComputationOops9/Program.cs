@@ -7,9 +7,9 @@ namespace EmployeeWageComputationOops9
         static void Main(string[] args)
         {
             Console.WriteLine("Calculate Daily Employee Wage");
-            EmployeeDailyWage employeeDailyWage = new EmployeeDailyWage(20);
-            int empWage=employeeDailyWage.CalculateEmployeeWageSwitchCase();
-            Console.WriteLine("Employee Wage :" + empWage);
+            EmployeeDailyWage employeeDailyWage = new EmployeeDailyWage(20,20);
+            employeeDailyWage.CalculateEmployeeWageMonth();
+            
         }
     }
 }
