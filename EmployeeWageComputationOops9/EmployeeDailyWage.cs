@@ -7,15 +7,11 @@ namespace EmployeeWageComputationOops9
     class EmployeeDailyWage
     {
 
-        public abstract class CalculateEmployeeWageAMonth
-        {
-            public abstract int[] CalculateEmployeeWageTotalHrsAMonth(int emp_Rate_Per_Hrs, int num_Working_Days, int max_Hrs_In_Month);
-            
-        }
-        public class CalculateEmployeeWage : CalculateEmployeeWageAMonth
+        
+        public class CalculateEmployeeWage 
         {
 
-            public override int[] CalculateEmployeeWageTotalHrsAMonth(int emp_Rate_Per_Hrs,int num_Working_Days,int max_HrS_In_Month)
+            public  int[] CalculateEmployeeWageTotalHrsAMonth(int emp_Rate_Per_Hrs,int num_Working_Days,int max_HrS_In_Month)
             {
                 int EMP_RATE_PER_HOUR = emp_Rate_Per_Hrs;// 20;
                 int empHour = 0;
@@ -25,13 +21,13 @@ namespace EmployeeWageComputationOops9
                 int totalWorkingDays = 0;
                 int totalWorkingHours = 0;
                 int NUM_OF_WORKING_DAYS = num_Working_Days;//20;
-                int MAX_HRS_IN_MONTH = max_HrS_In_Month;//100;
-                Random rdm = new Random();
+                int MAX_HRS_IN_MONTH = max_HrS_In_Month;//100;               
 
+                var data = new CheckEmpoyeeRandom();
                 while (totalWorkingDays < NUM_OF_WORKING_DAYS && totalWorkingHours < MAX_HRS_IN_MONTH)
-                {
+                {                    
                     totalWorkingDays++;
-                    int empCheck = rdm.Next(3);
+                    int empCheck = data.CheckRandomFullPartTime();
                     switch (empCheck)
                     {
                         case 1:
@@ -51,6 +47,7 @@ namespace EmployeeWageComputationOops9
                 int[] arrEmpWage = { totalWorkingDays, totalEmpHour, totalEmpWage };
                 return arrEmpWage;
             }
+            
         }
-        }
+     }
 }
